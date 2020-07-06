@@ -328,7 +328,7 @@ if HAVE_LLDB:
 
             # disassemble
             res = lldb.SBCommandReturnObject()
-            output = self.command('disassemble -s {} -c {}'.format(address, count))
+            output = self.command('disassemble -bmr -s {} -c {}'.format(address, count))
 
             return output
 
